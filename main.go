@@ -5,13 +5,11 @@ import (
   "net/http"
 )
 
-type String string
-
-func (s String) ServeHTTP(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprint(w, s)
+func handler(w http.ResponseWriter, r *http.Request) {
+  fmt.Fprint(w, "<h1>Hello world: MAU 2018/06/08")
 }
 
 func main() {
-  http.Handle("/", String("Hello World."))
+  http.Handle("/", handler)
   http.ListenAndServe(":80", nil)
 }
