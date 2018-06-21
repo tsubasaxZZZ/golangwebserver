@@ -1,14 +1,2 @@
-FROM golang:1.8.3-alpine
+FROM golang:1.10.3
 MAINTAINER Tsubasa Nomura
-
-ENV webserver_path /go/src/github.com/tsubasaxZZZ/golangwebserver/
-ENV PATH $PATH:$webserver_path
-
-WORKDIR $webserver_path
-COPY main.go .
-
-RUN go build .
-
-ENTRYPOINT ./golangwebserver
-
-EXPOSE 80
