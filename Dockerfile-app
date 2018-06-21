@@ -1,5 +1,5 @@
 ARG REGISTRY_NAME
-FROM ${ARG REGISTRY_NAME}/baseimages/golangwebserver:v1
+FROM ${REGISTRY_NAME}/baseimages/golangwebserver:v1
 #FROM golang:1.8.3-alpine
 MAINTAINER Tsubasa Nomura
 
